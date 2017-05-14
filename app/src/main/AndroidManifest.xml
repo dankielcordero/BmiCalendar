@@ -27,7 +27,17 @@
         <activity
             android:name=".WelcomeScreenActivity3"
             android:label="@string/title_activity_welcome_screen3"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".WelcomeScreenActivity4"
+            android:label="@string/title_activity_welcome_screen4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".WelcomeScreenActivity5"
+            android:label="@string/title_activity_welcome_screen5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".CalendarActivity"></activity>
     </application>
 
 </manifest>

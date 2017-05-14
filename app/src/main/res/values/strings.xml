@@ -3,5 +3,7 @@
     <string name="title_activity_elcome_screen1">ElcomeScreenActivity1</string>
     <string name="title_activity_welcome_screen2">WelcomeScreenActivity2</string>
     <string name="title_activity_welcome_screen3">WelcomeScreenActivity3</string>
+    <string name="title_activity_welcome_screen4">WelcomeScreenActivity4</string>
+    <string name="title_activity_welcome_screen5">WelcomeScreenActivity5</string>
 
 </resources>
