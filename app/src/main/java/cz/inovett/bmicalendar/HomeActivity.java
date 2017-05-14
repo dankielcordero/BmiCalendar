@@ -1,7 +1,9 @@
 package cz.inovett.bmicalendar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -11,5 +13,15 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
 
+    }
+
+    public void openCalendar(View view) {
+        Intent i = new Intent(HomeActivity.this, CalendarActivity.class);
+        startActivity(i);
+    }
+
+    public void openSettings(View view) {
+        Intent i = new Intent(HomeActivity.this, SettingsActivity.class);
+        startActivity(i);
     }
 }
