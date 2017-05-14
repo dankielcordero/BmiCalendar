@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BmiCalendar</string>
+    <string name="title_activity_elcome_screen1">ElcomeScreenActivity1</string>
 </resources>
