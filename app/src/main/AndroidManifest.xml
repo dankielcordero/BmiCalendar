@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".ElcomeScreenActivity1">
+        <activity android:name=".WelcomeScreenActivity1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,6 +19,14 @@
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_elcome_screen1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".WelcomeScreenActivity2"
+            android:label="@string/title_activity_welcome_screen2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".WelcomeScreenActivity3"
+            android:label="@string/title_activity_welcome_screen3"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
