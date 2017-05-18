@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.LegendRenderer;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
@@ -35,6 +36,7 @@ public class HomeActivity extends AppCompatActivity {
                 new DataPoint(4, 6)
         });
         graph.addSeries(series1);
+        series1.setTitle("weight");
     }
 
     private void setSeries2() {
@@ -46,7 +48,10 @@ public class HomeActivity extends AppCompatActivity {
                 new DataPoint(4, 7)
         });
         series2.setColor(Color.rgb(231, 76, 60));
+        series2.setTitle("sweets");
         graph.addSeries(series2);
+        graph.getLegendRenderer().setVisible(true);
+        graph.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.BOTTOM);
     }
 
 
