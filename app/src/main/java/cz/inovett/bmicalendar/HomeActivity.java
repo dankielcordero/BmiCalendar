@@ -1,5 +1,6 @@
 package cz.inovett.bmicalendar;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -13,13 +14,14 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 
 public class HomeActivity extends AppCompatActivity {
     private GraphView graph;
+    private ProgressDialog progressDialog;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
+        progressDialog = new ProgressDialog(this);
         graph = (GraphView) findViewById(R.id.graph);
         setSeries1();
         setSeries2();
@@ -58,6 +60,11 @@ public class HomeActivity extends AppCompatActivity {
     public void openCalendar(View view) {
         Intent i = new Intent(HomeActivity.this, CalendarActivity.class);
         startActivity(i);
+        progressDialog.setMessage("Opening .......");
+        progressDialog.show();
+
+
+
     }
 
     public void openSettings(View view) {
