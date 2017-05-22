@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.LegendRenderer;
@@ -13,9 +14,10 @@ import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
 public class HomeActivity extends AppCompatActivity {
+    String vek, vyska, vaha;
     private GraphView graph;
     private ProgressDialog progressDialog;
-
+    private TextView textViewInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +25,17 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         progressDialog = new ProgressDialog(this);
         graph = (GraphView) findViewById(R.id.graph);
+        textViewInfo = (TextView) findViewById(R.id.textViewInfo);
         setSeries1();
         setSeries2();
 
+
+        Bundle extras = getIntent().getExtras();
+        vyska = extras.getString("vyska");
+        vek = extras.getString("vek");
+        vaha = extras.getString("vaha");
+
+        textViewInfo.setText(vek + " yo" + " | " + vyska + " cm" + " | " + vaha + " kg");
 
     }
 

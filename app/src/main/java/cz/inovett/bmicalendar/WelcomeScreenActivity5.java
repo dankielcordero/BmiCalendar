@@ -5,19 +5,38 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 
 public class WelcomeScreenActivity5 extends AppCompatActivity {
 
+    TextView textViewBMI;
+    String vyska, vaha, vek;
+    int bmiVyska, bmitVaha, bmi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen5);
+
+        textViewBMI = (TextView) findViewById(R.id.textViewBMI);
+
+        Bundle extras = getIntent().getExtras();
+        vyska = extras.getString("vyska");
+        vaha = extras.getString("vaha");
+        vek = extras.getString("vek");
+
+        /*bmiVyska = Integer.valueOf(vyska);
+        bmitVaha = Integer.valueOf(vaha);
+        bmi = bmitVaha/(bmiVyska*bmiVyska);
+        textViewBMI.setText(bmi);*/
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(WelcomeScreenActivity5.this, HomeActivity.class);
+                i.putExtra("vaha", vaha);
+                i.putExtra("vek", vek);
+                i.putExtra("vyska", vyska);
                 startActivity(i);
             }
         });

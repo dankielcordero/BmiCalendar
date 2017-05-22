@@ -18,7 +18,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/imageView15"
         app:layout_constraintRight_toLeftOf="@+id/imageView14"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"
+        app:layout_constraintTop_toBottomOf="@+id/editTextVyska"
         app:layout_constraintVertical_bias="0.504"
         app:srcCompat="@drawable/circular" />
 
@@ -31,7 +31,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/imageView13"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"
+        app:layout_constraintTop_toBottomOf="@+id/editTextVyska"
         app:srcCompat="@drawable/circle_outline" />
 
     <ImageView
@@ -43,7 +43,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/imageView12"
         app:layout_constraintRight_toLeftOf="@+id/imageView15"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"
+        app:layout_constraintTop_toBottomOf="@+id/editTextVyska"
         app:layout_constraintVertical_bias="0.504"
         app:srcCompat="@drawable/circle_outline" />
 
@@ -56,7 +56,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/imageView8"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"
+        app:layout_constraintTop_toBottomOf="@+id/editTextVyska"
         app:srcCompat="@drawable/circle_outline" />
 
     <ImageView
@@ -68,7 +68,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/imageView13"
         app:layout_constraintRight_toLeftOf="@+id/imageView8"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"
+        app:layout_constraintTop_toBottomOf="@+id/editTextVyska"
         app:layout_constraintVertical_bias="0.507"
         app:srcCompat="@drawable/circle_outline" />
 
@@ -106,13 +106,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/editTextVyska"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:backgroundTint="@android:color/background_light"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="180"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
@@ -128,7 +128,7 @@
         android:layout_marginTop="39dp"
         android:backgroundTint="@android:color/background_light"
         android:visibility="visible"
-        app:layout_constraintLeft_toRightOf="@+id/editText3"
+        app:layout_constraintLeft_toRightOf="@+id/editTextVyska"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 </android.support.constraint.ConstraintLayout>

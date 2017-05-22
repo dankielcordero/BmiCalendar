@@ -43,13 +43,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editTextVaha"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:backgroundTint="@android:color/background_light"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="27"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
@@ -65,7 +65,7 @@
         android:layout_marginTop="46dp"
         android:backgroundTint="@android:color/background_light"
         android:visibility="visible"
-        app:layout_constraintLeft_toRightOf="@+id/editText2"
+        app:layout_constraintLeft_toRightOf="@+id/editTextVaha"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -78,7 +78,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/imageView2"
         app:layout_constraintRight_toLeftOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextVaha"
         app:layout_constraintVertical_bias="0.507"
         app:srcCompat="@drawable/circular" />
 
@@ -91,7 +91,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/imageView3"
         app:layout_constraintRight_toLeftOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextVaha"
         app:layout_constraintVertical_bias="0.507"
         app:srcCompat="@drawable/circle_outline" />
 
@@ -104,7 +104,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextVaha"
         app:layout_constraintVertical_bias="0.507"
         app:srcCompat="@drawable/circle_outline" />
 
@@ -117,7 +117,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/imageView5"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextVaha"
         app:layout_constraintVertical_bias="0.507"
         app:srcCompat="@drawable/circle_outline" />
 
@@ -130,7 +130,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/imageView"
         app:layout_constraintRight_toLeftOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextVaha"
         app:layout_constraintVertical_bias="0.507"
         app:srcCompat="@drawable/circle_outline" />
 </android.support.constraint.ConstraintLayout>
