@@ -34,7 +34,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="80dp"
-        android:text="age"
+        android:text="Weight"
         android:textColor="@android:color/background_light"
         android:textSize="30sp"
         app:layout_constraintHorizontal_bias="0.501"
