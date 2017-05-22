@@ -10,23 +10,24 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class SettingsActivity extends AppCompatActivity {
-    DatabaseHelper myDb;
     EditText editHeight, editAge, editWeight;
     Button btnAddData;
     Button btnviewAll;
+    DatabaseHelper myDb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        myDb = new DatabaseHelper(this);
-
         editHeight = (EditText) findViewById(R.id.editText_height);
         editAge = (EditText) findViewById(R.id.editText_age);
         editWeight = (EditText) findViewById(R.id.editText_Weight);
         btnAddData = (Button) findViewById(R.id.add);
         btnviewAll = (Button) findViewById(R.id.button_view_all);
+
+        myDb = new DatabaseHelper(this);
+
         AddData();
         viewAll();
     }
@@ -36,14 +37,13 @@ public class SettingsActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        boolean isInserted = myDb.insertData(editAge.getText().toString(),
-                                editHeight.getText().toString(),
+                        boolean isInserted = myDb.insertData(editHeight.getText().toString(),
+                                editAge.getText().toString(),
                                 editWeight.getText().toString());
-                        if (isInserted == true) {
+                        if (isInserted == true)
                             Toast.makeText(SettingsActivity.this, "Data Inserted", Toast.LENGTH_LONG).show();
-                        } else {
+                        else
                             Toast.makeText(SettingsActivity.this, "Data not Inserted", Toast.LENGTH_LONG).show();
-                        }
                     }
                 }
         );
@@ -63,9 +63,9 @@ public class SettingsActivity extends AppCompatActivity {
 
                         StringBuffer buffer = new StringBuffer();
                         while (res.moveToNext()) {
-                            buffer.append("Age :" + res.getString(1) + "\n");
-                            buffer.append("Height :" + res.getString(2) + "\n");
-                            buffer.append("Weight :" + res.getString(3) + "\n");
+                            buffer.append("Age :" + res.getString(2) + "\n");
+                            buffer.append("Height :" + res.getString(1) + "\n");
+                            buffer.append("Weight :" + res.getString(3) + "\n\n");
                         }
 
                         // Show all data
@@ -82,4 +82,6 @@ public class SettingsActivity extends AppCompatActivity {
         builder.setMessage(Message);
         builder.show();
     }
+
+
 }
