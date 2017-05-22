@@ -50,7 +50,7 @@
         android:backgroundTint="@android:color/background_light"
         android:ems="10"
         android:inputType="number"
-        android:text="27"
+        android:text="75"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textSize="50sp"

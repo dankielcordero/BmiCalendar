@@ -14,7 +14,9 @@ import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
 public class HomeActivity extends AppCompatActivity {
-    String vek, vyska, vaha;
+    String vek, vyska, vaha, bmiText;
+    TextView textViewBMI, textViewNadvaha;
+    double bmiVyska, bmiVaha, bmi;
     private GraphView graph;
     private ProgressDialog progressDialog;
     private TextView textViewInfo;
@@ -25,6 +27,8 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         progressDialog = new ProgressDialog(this);
         graph = (GraphView) findViewById(R.id.graph);
+        textViewBMI = (TextView) findViewById(R.id.textViewBMI);
+        textViewNadvaha = (TextView) findViewById(R.id.textViewNadvaha);
         textViewInfo = (TextView) findViewById(R.id.textViewInfo);
         setSeries1();
         setSeries2();
@@ -34,6 +38,30 @@ public class HomeActivity extends AppCompatActivity {
         vyska = extras.getString("vyska");
         vek = extras.getString("vek");
         vaha = extras.getString("vaha");
+        bmiText = extras.getString("bmi");
+
+        textViewBMI.setText(bmiText);
+        bmiVyska = Double.parseDouble(vyska);
+        bmiVaha = Double.parseDouble(vaha);
+        bmi = (bmiVaha / (bmiVyska * bmiVyska)) * 10000;
+
+
+        if (bmi <= 20) {
+            textViewNadvaha.setText("Podváha");
+            textViewNadvaha.setTextColor(Color.rgb(52, 152, 219));
+        } else if (bmi > 20 && bmi <= 25) {
+            textViewNadvaha.setText("Ideální stav");
+            textViewNadvaha.setTextColor(Color.rgb(46, 204, 113));
+        } else if (bmi > 25 && bmi <= 30) {
+            textViewNadvaha.setText("Mírná nadváha");
+            textViewNadvaha.setTextColor(Color.rgb(39, 174, 96));
+        } else if (bmi > 30 && bmi <= 40) {
+            textViewNadvaha.setText("Obezita");
+            textViewNadvaha.setTextColor(Color.rgb(231, 76, 60));
+        } else if (bmi > 40) {
+            textViewNadvaha.setText("Těžká Obezita");
+            textViewNadvaha.setTextColor(Color.rgb(192, 57, 43));
+        }
 
         textViewInfo.setText(vek + " yo" + " | " + vyska + " cm" + " | " + vaha + " kg");
 
